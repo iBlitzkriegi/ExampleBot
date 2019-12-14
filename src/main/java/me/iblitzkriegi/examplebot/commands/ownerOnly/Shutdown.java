@@ -6,7 +6,7 @@ import me.iblitzkriegi.jdacommands.utilities.Command;
 import me.iblitzkriegi.jdacommands.utilities.wrappers.CommandEvent;
 
 @CommandInfo(
-        name = "Shutdown",
+        name = "shutdown",
         desc = "Stop the bot. This is owner only.",
         usage = "shutdown",
         aliases = {"stop", "end"}
