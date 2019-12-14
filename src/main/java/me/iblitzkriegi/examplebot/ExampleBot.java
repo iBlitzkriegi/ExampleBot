@@ -1,5 +1,6 @@
 package me.iblitzkriegi.examplebot;
 
+import me.iblitzkriegi.jdacommands.utilities.CommandClientBuilder;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -17,11 +18,37 @@ public class ExampleBot {
             System.out.println("Could not load config file");
             return;
         }
+
         //Cast the loaded json to simple json's JSONObject
         JSONObject jsonObject = (JSONObject) object;
+
         // Get the token and prefix from the config file
         String token = (String) jsonObject.get("TOKEN");
         String prefix = (String) jsonObject.get("PREFIX");
+
+        //Create a ClientBuilder to start building our bot
+        CommandClientBuilder clientBuilder = new CommandClientBuilder();
+
+        //Set the token for our bot
+        clientBuilder.setToken(token);
+
+        //Set the prefix the bot will use, this isn't mandatory
+        clientBuilder.setPrefix(prefix);
+
+        //Use the default game. It shows: Playing: use <prefix>help
+        clientBuilder.useDefaultGame();
+
+        //Use JDA-CommandBuilder's already created help command
+        clientBuilder.useDefaultHelpCommand();
+
+        //Define myself as an owner. Make sure you use the L at the end to make it a long.
+        clientBuilder.setOwnerIds(98208218022428672L);
+
+        /*
+        Set the logging level for them bot. The options can be seen with CommandClientBuilder#LogLevel.
+        I used INFO so I'll only see relevant information.
+         */
+        clientBuilder.setLoggingLevel(CommandClientBuilder.LogLevel.INFO);
 
     }
 
