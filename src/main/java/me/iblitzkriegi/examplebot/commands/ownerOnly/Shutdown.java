@@ -16,6 +16,7 @@ public class Shutdown extends Command {
 
     @Override
     public void execute(CommandEvent commandEvent, String[] strings) {
-
+        commandEvent.reply("Oh no.. Alright. I'll be heading out now then.. Bye! :wave:");
+        commandEvent.getJDA().shutdownNow();
     }
 }
