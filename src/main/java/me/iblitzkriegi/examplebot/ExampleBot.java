@@ -1,6 +1,7 @@
 package me.iblitzkriegi.examplebot;
 
 import me.iblitzkriegi.jdacommands.utilities.CommandClientBuilder;
+import me.iblitzkriegi.jdacommands.utilities.wrappers.CommandClient;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -49,6 +50,9 @@ public class ExampleBot {
         I used INFO so I'll only see relevant information.
          */
         clientBuilder.setLoggingLevel(CommandClientBuilder.LogLevel.INFO);
+
+        //Now build the CommandClientBuilder into a CommandClient
+        CommandClient client = clientBuilder.build(ExampleBot.class);
 
     }
 
