@@ -1,4 +1,21 @@
 package me.iblitzkriegi.examplebot.commands.ownerOnly;
 
-public class Shutdown {
+import me.iblitzkriegi.jdacommands.annotations.CommandInfo;
+import me.iblitzkriegi.jdacommands.annotations.executionRules.OwnerOnly;
+import me.iblitzkriegi.jdacommands.utilities.Command;
+import me.iblitzkriegi.jdacommands.utilities.wrappers.CommandEvent;
+
+@CommandInfo(
+        name = "Shutdown",
+        desc = "Stop the bot. This is owner only.",
+        usage = "shutdown",
+        aliases = {"stop", "end"}
+)
+@OwnerOnly
+public class Shutdown extends Command {
+
+    @Override
+    public void execute(CommandEvent commandEvent, String[] strings) {
+
+    }
 }
