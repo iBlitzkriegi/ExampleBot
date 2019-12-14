@@ -27,6 +27,5 @@ public class Say extends Command {
         MessageBuilder builder = new MessageBuilder();
         Arrays.stream(arguments).forEach(argument -> builder.append(argument + " "));
         commandEvent.reply(builder.build());
-
     }
 }
