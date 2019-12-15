@@ -19,6 +19,9 @@ public class Purge extends Command {
     }
 
     boolean isNumeric(String input) {
+        if (input == null) {
+            return false;
+        }
         try {
             Integer.parseInt(input);
         } catch (Exception x) {
