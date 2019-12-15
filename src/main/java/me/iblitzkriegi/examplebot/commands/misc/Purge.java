@@ -17,4 +17,14 @@ public class Purge extends Command {
     public void execute(CommandEvent commandEvent, String[] strings) {
         
     }
+
+    boolean isNumeric(String input) {
+        try {
+            Integer.parseInt(input);
+        } catch (Exception x) {
+            return false;
+        }
+        return true;
+    }
+
 }
