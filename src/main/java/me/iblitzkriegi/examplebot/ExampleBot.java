@@ -49,7 +49,7 @@ public class ExampleBot {
         clientBuilder.useMentionTagPrefix(true);
 
         /*
-        Set the logging level for them bot. The options can be seen with CommandClientBuilder#LogLevel.
+        Set the logging level for the bot. The options can be seen with CommandClientBuilder#LogLevel.
         I used INFO so I'll only see relevant information.
          */
         clientBuilder.setLoggingLevel(CommandClientBuilder.LogLevel.INFO);
