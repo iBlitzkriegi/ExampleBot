@@ -37,10 +37,10 @@ public class ExampleBot {
         clientBuilder.setPrefix(prefix);
 
         //Use the default game. It shows: Playing: use <prefix>help
-        clientBuilder.useDefaultGame();
+        clientBuilder.useDefaultGame(true);
 
         //Use JDA-CommandBuilder's already created help command
-        clientBuilder.useDefaultHelpCommand();
+        clientBuilder.useDefaultHelpCommand(true);
 
         //Define myself as an owner. Make sure you use the L at the end to make it a long.
         clientBuilder.setOwnerIds(98208218022428672L);
