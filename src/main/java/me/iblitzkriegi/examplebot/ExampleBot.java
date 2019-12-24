@@ -45,6 +45,9 @@ public class ExampleBot {
         //Define myself as an owner. Make sure you use the L at the end to make it a long.
         clientBuilder.setOwnerIds(98208218022428672L);
 
+        //Make it so we can use the "@Bot command" format for prefixing.
+        clientBuilder.useMentionTagPrefix(true);
+
         /*
         Set the logging level for them bot. The options can be seen with CommandClientBuilder#LogLevel.
         I used INFO so I'll only see relevant information.
